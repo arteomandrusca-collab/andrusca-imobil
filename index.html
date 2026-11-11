@@ -1,95 +1,685 @@
 <!doctype html>
+
 <html lang="ro">
+
 <head>
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="ANDRUSCA IMOBIL — proprietăți în Ungheni și în Republica Moldova.">
-<meta name="theme-color" content="#111111">
-<title>ANDRUSCA IMOBIL | Proprietăți</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="ANDRUSCA IMOBIL — apartamente, case și terenuri de vânzare și chirie în Ungheni și împrejurimi.">
+
+<meta name="theme-color" content="#151515">
+
+<title>ANDRUSCA IMOBIL | Proprietăți în Ungheni</title>
+
 <style>
-:root{--gold:#b99754;--ink:#151515;--paper:#f7f6f2;--muted:#777}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-header{background:#111;color:#fff;position:sticky;top:0;z-index:9;border-bottom:1px solid #333}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font:22px Georgia,serif;letter-spacing:1.2px}.brand span{color:var(--gold)}
-nav{display:flex;gap:22px;font-size:14px}nav a:hover{color:var(--gold)}
-.menu{display:none;background:transparent;color:white;border:1px solid #555;border-radius:6px;padding:9px}
-.hero{min-height:500px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.2)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-content{padding:78px 0;max-width:680px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
-h1{font:clamp(38px,7vw,68px)/1.05 Georgia,serif;margin:18px 0}.hero p{font-size:18px;line-height:1.7;color:#eee;max-width:560px}
-.btn{display:inline-block;background:var(--gold);color:#111;border:0;padding:14px 20px;border-radius:3px;font-weight:bold;cursor:pointer;text-align:center}
-.btn.dark{background:#111;color:white}.btn.line{background:transparent;border:1px solid var(--gold);color:white;margin-left:8px}
-section{padding:68px 0}.heading{text-align:center;margin:0 auto 30px}.heading h2{font:36px Georgia,serif;margin:10px 0}.heading p{color:var(--muted);line-height:1.6}
-.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:24px 0 30px}
-input,select,textarea{font:inherit;padding:13px;border:1px solid #ddd;border-radius:3px;background:#fff;min-width:0}
-.filters input,.filters select{min-width:170px}
+
+:root{--gold:#b99754;--ink:#151515;--muted:#777;--paper:#f7f6f2;--white:#fff;--line:#e8e5de}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper)}
+
+a{color:inherit;text-decoration:none}
+
+button,input,select,textarea{font:inherit}
+
+.wrap{width:min(1160px,92%);margin:auto}
+
+header{background:#111;color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #333}
+
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+.brand{font-family:Georgia,serif;font-size:23px;letter-spacing:2px}
+
+.brand span{color:var(--gold)}
+
+nav{display:flex;gap:25px;font-size:14px;color:#ddd}
+
+nav a:hover{color:var(--gold)}
+
+.nav-actions{display:flex;gap:10px;align-items:center}
+
+.btn{border:0;border-radius:4px;padding:13px 18px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+
+.btn-gold{background:var(--gold);color:#111}
+
+.btn-dark{background:#111;color:white}
+
+.btn-outline{background:transparent;border:1px solid #aaa;color:inherit}
+
+.menu-toggle{display:none;background:none;color:#fff;border:1px solid #555;padding:8px 11px;border-radius:4px}
+
+.hero{min-height:490px;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.26)),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;display:flex;align-items:center;color:white}
+
+.hero-inner{padding:75px 0;max-width:690px}
+
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
+
+h1{font:clamp(38px,6vw,66px)/1.06 Georgia,serif;margin:18px 0}
+
+.hero p{font-size:18px;line-height:1.7;color:#e5e5e5;max-width:580px}
+
+.search-panel{background:white;color:var(--ink);padding:22px;border-radius:7px;box-shadow:0 16px 40px #0002;margin-top:-42px;position:relative;z-index:2}
+
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:12px}
+
+.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 7px}
+
+.field input,.field select,.field textarea{width:100%;border:1px solid #ddd;border-radius:4px;padding:13px;background:white;min-width:0}
+
+.section{padding:76px 0}
+
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+
+.section-head h2{font:38px Georgia,serif;margin:8px 0}
+
+.section-head p{color:var(--muted);margin:0}
+
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.property{background:#fff;border:1px solid #eceae4;box-shadow:0 8px 28px #0000000b}
-.property img{width:100%;height:215px;object-fit:cover;display:block}
-.pbody{padding:19px}.tag{color:#98783c;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:bold}
-.property h3{font:23px Georgia,serif;margin:9px 0}.loc{color:#777;font-size:13px}.price{font-size:22px;font-weight:bold;margin:14px 0}
-.details{display:flex;gap:14px;color:#666;font-size:13px;border-top:1px solid #eee;padding:12px 0;margin-bottom:12px}
-.property .btn{width:100%}
-.note{font-size:12px;color:#888;text-align:center;margin-top:20px}
-.about{background:#111;color:white}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-.about h2{font:38px Georgia,serif}.about p{color:#ccc;line-height:1.8}.about img{width:100%;height:330px;object-fit:cover}
-.publish{background:var(--paper)}.form-card{background:white;border:1px solid #e8e4da;border-top:3px solid var(--gold);padding:26px;max-width:680px;margin:auto}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-grid label{display:grid;gap:6px;font-size:13px;font-weight:bold}.form-grid .wide{grid-column:1/-1}
-.form-card small{display:block;color:#777;line-height:1.5;margin-top:14px}
-.contact{background:#eeeae1}.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact h2{font:36px Georgia,serif}.contact p{line-height:1.8;color:#555}
-.contact-card{background:#fff;padding:26px;border-top:3px solid var(--gold)}.contact-card a{display:block;margin:14px 0;font-weight:bold}
-footer{background:#0b0b0b;color:#aaa;text-align:center;padding:25px;font-size:13px}footer strong{color:var(--gold)}
-#empty{display:none;text-align:center;padding:24px;color:#777}
-@media(max-width:760px){.nav{min-height:64px}nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;padding:20px;flex-direction:column}nav.open{display:flex}.menu{display:block}.hero{min-height:430px}.hero-content{padding:60px 0}.grid{grid-template-columns:1fr}.about-inner,.contact-inner{grid-template-columns:1fr}.about img{height:240px}.filters input,.filters select{width:100%}.form-grid{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}section{padding:52px 0}.btn.line{margin:10px 0 0}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:.2s}
+
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #0001}
+
+.photo{height:220px;background:#ddd center/cover;position:relative}
+
+.tag{position:absolute;top:14px;left:14px;background:var(--gold);padding:7px 10px;font-size:11px;font-weight:bold;text-transform:uppercase}
+
+.card-body{padding:19px}
+
+.price{font-size:23px;font-weight:bold;margin-bottom:8px}
+
+.card h3{font:22px Georgia,serif;margin:0 0 8px}
+
+.location{color:var(--muted);font-size:14px}
+
+.meta{display:flex;gap:15px;color:#666;font-size:13px;padding:15px 0;border-top:1px solid var(--line);margin-top:15px}
+
+.card-foot{display:flex;justify-content:space-between;align-items:center}
+
+.text-link{color:#8a6b31;font-weight:bold;font-size:14px}
+
+.empty{grid-column:1/-1;text-align:center;padding:45px;color:var(--muted);background:white;border:1px dashed #ccc}
+
+.about{background:#111;color:#fff}
+
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+
+.about h2{font:40px Georgia,serif}
+
+.about p{color:#ccc;line-height:1.8}
+
+.about-image{height:350px;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80') center/cover;border-radius:5px}
+
+.contact{background:#eae7df}
+
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+
+.contact h2{font:40px Georgia,serif;margin-top:0}
+
+.contact p{color:#555;line-height:1.7}
+
+.contact-card{background:white;padding:25px;border-radius:6px}
+
+.contact-card a{display:block;padding:9px 0;font-weight:bold}
+
+footer{background:#090909;color:#aaa;padding:28px 0;font-size:13px}
+
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:50;padding:18px;overflow:auto}
+
+.modal.open{display:flex;align-items:center;justify-content:center}
+
+.modal-box{background:white;width:min(650px,100%);padding:25px;border-radius:7px;max-height:92vh;overflow:auto}
+
+.modal-head{display:flex;justify-content:space-between;align-items:center}
+
+.close{border:0;background:#eee;border-radius:50%;width:36px;height:36px;font-size:22px;cursor:pointer}
+
+.admin-note{font-size:12px;color:#8a6b31;margin-top:12px;line-height:1.5}
+
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.admin-grid .full{grid-column:1/-1}
+
+@media(max-width:850px){
+
+nav{display:none;position:absolute;top:76px;left:0;right:0;background:#111;padding:20px;flex-direction:column}
+
+nav.show{display:flex}
+
+.menu-toggle{display:block}
+
+.filters{grid-template-columns:1fr 1fr}
+
+.filters .field:first-child{grid-column:1/-1}
+
+.filters button{grid-column:1/-1}
+
+.grid{grid-template-columns:repeat(2,1fr)}
+
+}
+
+@media(max-width:600px){
+
+.nav-actions .btn{display:none}
+
+.hero{min-height:430px}
+
+.hero-inner{padding:55px 0}
+
+.hero p{font-size:16px}
+
+.section{padding:55px 0}
+
+.section-head{display:block}
+
+.grid{grid-template-columns:1fr}
+
+.about-inner,.contact-inner{grid-template-columns:1fr}
+
+.about-image{height:240px}
+
+.filters{grid-template-columns:1fr}
+
+.filters .field:first-child{grid-column:auto}
+
+.admin-grid{grid-template-columns:1fr}
+
+.admin-grid .full{grid-column:auto}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<header><div class="wrap nav">
+
+<header>
+
+<div class="wrap nav">
+
 <a class="brand" href="#acasa">ANDRUSCA <span>IMOBIL</span></a>
-<button class="menu" id="menuBtn" aria-label="Meniu">Meniu ☰</button>
-<nav id="nav"><a href="#acasa">Acasă</a><a href="#proprietati">Proprietăți</a><a href="#despre">Despre noi</a><a href="#publica">Publică anunț</a><a href="#contact">Contact</a></nav>
-</div></header>
+
+<nav id="nav">
+
+<a href="#acasa">Acasă</a>
+
+<a href="#proprietati">Proprietăți</a>
+
+<a href="#despre">Despre noi</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="nav-actions">
+
+<a class="btn btn-gold" href="#contact">Solicită o ofertă</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Deschide meniul">☰</button>
+
+</div>
+
+</div>
+
+</header>
+
 <main>
-<section class="hero" id="acasa"><div class="wrap hero-content">
-<div class="eyebrow">Imobiliare • Ungheni, Moldova</div>
-<h1>Locul tău. Povestea ta. Casa ta.</h1>
-<p>Descoperă proprietăți în Ungheni și împrejurimi. Te ajutăm să găsești locuința potrivită sau să-ți prezinți proprietatea potențialilor cumpărători.</p>
-<a class="btn" href="#proprietati">Vezi proprietățile</a><a class="btn line" href="#contact">Contactează-ne</a>
-</div></section>
-<section id="proprietati"><div class="wrap">
-<div class="heading"><div class="eyebrow">Oferte imobiliare</div><h2>Proprietăți recomandate</h2><p>Explorează exemplele de prezentare. Ofertele reale se adaugă după confirmarea detaliilor și fotografiilor.</p></div>
-<div class="filters"><input id="search" type="search" placeholder="Caută după zonă sau denumire"><select id="type"><option value="">Toate tipurile</option><option>Apartament</option><option>Casă</option><option>Teren</option></select><select id="budget"><option value="">Orice preț</option><option value="60000">Până la 60.000 €</option><option value="80000">Până la 80.000 €</option><option value="100000">Până la 100.000 €</option></select></div>
-<div class="grid" id="listings">
-<article class="property" data-type="Apartament" data-price="55000" data-search="apartament modern ungheni centru"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Interior apartament modern"><div class="pbody"><div class="tag">Apartament</div><h3>Apartament modern</h3><div class="loc">Ungheni • Zonă centrală</div><div class="price">55.000 €</div><div class="details"><span>2 camere</span><span>Renovat</span></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/37376019816?text=Bun%C4%83%2C%20m%C4%83%20intereseaz%C4%83%20apartamentul%20demonstrativ">Solicită detalii</a></div></article>
-<article class="property" data-type="Apartament" data-price="72000" data-search="apartament spatios ungheni"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Interior locuință luminoasă"><div class="pbody"><div class="tag">Apartament</div><h3>Apartament spațios</h3><div class="loc">Ungheni • Cartier liniștit</div><div class="price">72.000 €</div><div class="details"><span>3 camere</span><span>Balcon</span></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/37376019816?text=Bun%C4%83%2C%20m%C4%83%20intereseaz%C4%83%20apartamentul%20demonstrativ">Solicită detalii</a></div></article>
-<article class="property" data-type="Casă" data-price="95000" data-search="casa familiala ungheni curte"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Casă cu curte"><div class="pbody"><div class="tag">Casă</div><h3>Casă pentru familie</h3><div class="loc">Ungheni • Curte proprie</div><div class="price">95.000 €</div><div class="details"><span>4 camere</span><span>Curte</span></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/37376019816?text=Bun%C4%83%2C%20m%C4%83%20intereseaz%C4%83%20casa%20demonstrativ%C4%83">Solicită detalii</a></div></article>
-</div><div id="empty">Nu am găsit proprietăți pentru filtrele selectate.</div>
-<p class="note">Notă: cele trei proprietăți afișate sunt exemple demonstrative, nu anunțuri reale.</p>
-</div></section>
-<section class="about" id="despre"><div class="wrap about-inner"><div><div class="eyebrow">Andrusca Imobil</div><h2>Mai aproape de locul pe care îl numești acasă.</h2><p>Oferim comunicare directă și sprijin în prezentarea și căutarea proprietăților. Contactează-ne pentru a discuta despre vânzare, cumpărare sau închiriere.</p><a class="btn" href="#contact">Discută cu noi</a></div><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Interior elegant"></div></section>
-<section class="publish" id="publica"><div class="wrap"><div class="heading"><div class="eyebrow">Ai o proprietate?</div><h2>Publică un anunț</h2><p>Completează formularul. Detaliile vor fi trimise direct pe WhatsApp pentru verificare.</p></div>
-<div class="form-card"><form id="listingForm"><div class="form-grid">
-<label>Numele tău<input id="ownerName" required placeholder="Nume și prenume"></label>
-<label>Telefon de contact<input id="ownerPhone" placeholder="+373..."></label>
-<label>Tipul proprietății<select id="ownerType"><option>Apartament</option><option>Casă</option><option>Teren</option><option>Spațiu comercial</option></select></label>
-<label>Tipul ofertei<select id="offerType"><option>Vânzare</option><option>Închiriere</option></select></label>
-<label class="wide">Localitate / zonă<input id="ownerLocation" required placeholder="Ex.: Ungheni, centru"></label>
-<label>Preț solicitat<input id="ownerPrice" placeholder="Ex.: 65.000 EUR"></label>
-<label>Suprafață<input id="ownerArea" placeholder="Ex.: 75 m²"></label>
-<label class="wide">Descriere<textarea id="ownerDescription" rows="3" placeholder="Camere, stare, facilități și alte detalii"></textarea></label>
-</div><button class="btn dark" type="submit" style="width:100%;margin-top:18px">Trimite oferta pe WhatsApp</button></form><small>Formularul nu publică automat proprietatea pe site. Se deschide WhatsApp cu informațiile completate, pentru verificare și confirmare.</small></div></div></section>
-<section class="contact" id="contact"><div class="wrap contact-inner"><div><div class="eyebrow">Suntem la dispoziția ta</div><h2>Hai să găsim proprietatea potrivită.</h2><p>Ai întrebări despre o ofertă sau dorești să prezinți o proprietate? Scrie-ne sau sună-ne.</p></div><div class="contact-card"><div class="tag">Contact direct</div><a href="tel:+37376019816">Telefon: +373 760 19816</a><a href="https://wa.me/37376019816" target="_blank" rel="noopener">WhatsApp: +373 760 19816</a><p>Ungheni, Republica Moldova</p></div></div></section>
+
+<section class="hero" id="acasa">
+
+<div class="wrap">
+
+<div class="hero-inner">
+
+<div class="eyebrow">Agenție imobiliară · Ungheni, Moldova</div>
+
+<h1>Locul potrivit.<br>Următorul tău capitol.</h1>
+
+<p>Te ajutăm să găsești proprietatea potrivită — apartamente, case și terenuri pentru vânzare sau chirie.</p>
+
+<a class="btn btn-gold" href="#proprietati">Vezi proprietățile →</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="wrap">
+
+<div class="search-panel">
+
+<div class="filters">
+
+<div class="field">
+
+<label for="search">Caută după localitate sau titlu</label>
+
+<input id="search" placeholder="Ex. Ungheni, apartament...">
+
+</div>
+
+<div class="field">
+
+<label for="type">Tip proprietate</label>
+
+<select id="type">
+
+<option value="">Toate tipurile</option>
+
+<option>Apartament</option>
+
+<option>Casă</option>
+
+<option>Teren</option>
+
+<option>Comercial</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="deal">Tranzacție</label>
+
+<select id="deal">
+
+<option value="">Toate</option>
+
+<option>Vânzare</option>
+
+<option>Chirie</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="budget">Buget maxim (€)</label>
+
+<input id="budget" type="number" min="0" placeholder="Orice buget">
+
+</div>
+
+<button class="btn btn-dark" id="clearFilters">Resetează</button>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="section wrap" id="proprietati">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">Portofoliul nostru</div>
+
+<h2>Proprietăți disponibile</h2>
+
+<p id="resultCount">O selecție de proprietăți</p>
+
+</div>
+
+<button class="btn btn-outline" id="adminOpen">Administrare</button>
+
+</div>
+
+<div class="grid" id="listings"></div>
+
+</section>
+
+<section class="section about" id="despre">
+
+<div class="wrap about-inner">
+
+<div>
+
+<div class="eyebrow">Despre ANDRUSCA IMOBIL</div>
+
+<h2>Mai mult decât o proprietate. Un loc pe care îl numești acasă.</h2>
+
+<p>Suntem aici să simplificăm procesul de cumpărare, vânzare sau închiriere. Îți oferim informații clare, comunicare directă și sprijin la fiecare pas.</p>
+
+<a class="btn btn-gold" href="#contact">Discută cu noi</a>
+
+</div>
+
+<div class="about-image" role="img" aria-label="Interior modern de locuință"></div>
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+<div class="wrap contact-inner">
+
+<div>
+
+<div class="eyebrow">Suntem la un mesaj distanță</div>
+
+<h2>Hai să găsim proprietatea potrivită.</h2>
+
+<p>Spune-ne ce cauți și revenim cu detalii. Pentru anunțuri noi sau programarea unei vizionări, contactează-ne direct.</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Contact ANDRUSCA IMOBIL</h3>
+
+<a href="tel:+37376019816">☎ +373 760 19816</a>
+
+<a href="https://wa.me/37376019816" target="_blank" rel="noopener">✉ Scrie-ne pe WhatsApp</a>
+
+<p>Ungheni, Republica Moldova</p>
+
+<a class="btn btn-gold" href="https://wa.me/37376019816" target="_blank" rel="noopener">Trimite mesaj</a>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
-<footer>© <span id="year"></span> <strong>ANDRUSCA IMOBIL</strong> • Ungheni, Republica Moldova</footer>
+
+<footer>
+
+<div class="wrap footer-inner">
+
+<span>© <span id="year"></span> ANDRUSCA IMOBIL. Toate drepturile rezervate.</span>
+
+<span>Ungheni · Republica Moldova</span>
+
+</div>
+
+</footer>
+
+<div class="modal" id="adminModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2>Adaugă un anunț</h2>
+
+<button class="close" id="adminClose">×</button>
+
+</div>
+
+<p style="color:#666;font-size:14px">Completează datele proprietății. În această versiune de test, anunțurile se păstrează numai în browserul și dispozitivul pe care le adaugi.</p>
+
+<form id="listingForm">
+
+<div class="admin-grid">
+
+<div class="field">
+
+<label>Titlu</label>
+
+<input name="title" required placeholder="Apartament cu 2 camere">
+
+</div>
+
+<div class="field">
+
+<label>Localitate</label>
+
+<input name="location" required placeholder="Ungheni">
+
+</div>
+
+<div class="field">
+
+<label>Tip</label>
+
+<select name="type">
+
+<option>Apartament</option>
+
+<option>Casă</option>
+
+<option>Teren</option>
+
+<option>Comercial</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Tranzacție</label>
+
+<select name="deal">
+
+<option>Vânzare</option>
+
+<option>Chirie</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Preț (€)</label>
+
+<input name="price" type="number" min="1" required>
+
+</div>
+
+<div class="field">
+
+<label>Suprafață (m²)</label>
+
+<input name="area" type="number" min="0">
+
+</div>
+
+<div class="field full">
+
+<label>Link fotografie (URL)</label>
+
+<input name="image" type="url" placeholder="https://...">
+
+</div>
+
+<div class="field full">
+
+<label>Descriere</label>
+
+<textarea name="description" rows="3" placeholder="Detalii despre proprietate"></textarea>
+
+</div>
+
+</div>
+
+<p class="admin-note">Important: acesta nu este încă un panou securizat și nu publică anunțurile pentru ceilalți vizitatori. Pentru administrare reală de pe orice telefon trebuie conectată o bază de date și configurată autentificarea.</p>
+
+<button class="btn btn-gold" style="margin-top:14px" type="submit">Adaugă în această previzualizare</button>
+
+</form>
+
+</div>
+
+</div>
+
 <script>
-const nav=document.getElementById('nav');
-document.getElementById('menuBtn').addEventListener('click',()=>nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const search=document.getElementById('search'),type=document.getElementById('type'),budget=document.getElementById('budget');
-function filterListings(){let count=0;document.querySelectorAll('.property').forEach(card=>{const ok=card.dataset.search.includes(search.value.toLowerCase())&&(!type.value||card.dataset.type===type.value)&&(!budget.value||Number(card.dataset.price)<=Number(budget.value));card.style.display=ok?'block':'none';if(ok)count++});document.getElementById('empty').style.display=count?'none':'block'}
-[search,type,budget].forEach(el=>el.addEventListener('input',filterListings));
-document.getElementById('listingForm').addEventListener('submit',function(e){e.preventDefault();const fields=[['Nume',document.getElementById('ownerName').value],['Telefon',document.getElementById('ownerPhone').value],['Proprietate',document.getElementById('ownerType').value],['Ofertă',document.getElementById('offerType').value],['Localitate',document.getElementById('ownerLocation').value],['Preț',document.getElementById('ownerPrice').value],['Suprafață',document.getElementById('ownerArea').value],['Descriere',document.getElementById('ownerDescription').value]];const message='Bună! Doresc să public o proprietate pe ANDRUSCA IMOBIL:\n'+fields.map(x=>x[0]+': '+(x[1]||'Nespecificat')).join('\n');window.open('https://wa.me/37376019816?text='+encodeURIComponent(message),'_blank')});
-document.getElementById('year').textContent=new Date().getFullYear();
+
+const starter = [
+
+{id:1,title:"Apartament cu 2 camere",location:"Ungheni",type:"Apartament",deal:"Vânzare",price:42000,area:54,image:"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",description:"Apartament luminos, într-o zonă accesibilă."},
+
+{id:2,title:"Casă cu teren",location:"Ungheni",type:"Casă",deal:"Vânzare",price:78000,area:120,image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",description:"Casă spațioasă, curte și acces comod."},
+
+{id:3,title:"Teren pentru construcție",location:"Ungheni",type:"Teren",deal:"Vânzare",price:18000,area:800,image:"https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80",description:"Teren potrivit pentru construcția unei case."}
+
+];
+
+let listings = JSON.parse(localStorage.getItem("andruscaListings") || "null") || starter;
+
+const $ = id => document.getElementById(id);
+
+const money = n => new Intl.NumberFormat("ro-RO").format(Number(n))+" €";
+
+function render(){
+
+const q=$("search").value.toLowerCase();
+
+const type=$("type").value;
+
+const deal=$("deal").value;
+
+const budget=Number($("budget").value||0);
+
+const filtered=listings.filter(x=>
+
+(!q||(x.title+" "+x.location).toLowerCase().includes(q))&&
+
+(!type||x.type===type)&&
+
+(!deal||x.deal===deal)&&
+
+(!budget||Number(x.price)<=budget)
+
+);
+
+$("resultCount").textContent=filtered.length+" proprietăți găsite";
+
+$("listings").innerHTML=filtered.length?
+
+filtered.map(x=>`
+
+<article class="card">
+
+<div class="photo" style="background-image:url('${safe(x.image)}')">
+
+<span class="tag">${safe(x.deal)}</span>
+
+</div>
+
+<div class="card-body">
+
+<div class="price">${money(x.price)}</div>
+
+<h3>${safe(x.title)}</h3>
+
+<div class="location">⌖ ${safe(x.location)}</div>
+
+<div class="meta">
+
+<span>${safe(x.type)}</span>
+
+<span>${x.area?x.area+" m²":"Suprafață la cerere"}</span>
+
+</div>
+
+<div class="card-foot">
+
+<span class="text-link">${safe(x.description||"Detalii la telefon")}</span>
+
+<a class="text-link" href="https://wa.me/37376019816?text=${encodeURIComponent("Bună ziua! Mă interesează: "+x.title)}" target="_blank" rel="noopener">Detalii →</a>
+
+</div>
+
+</div>
+
+</article>`).join("")
+
+:'<div class="empty">Nu am găsit proprietăți pentru criteriile selectate.</div>';
+
+}
+
+function safe(v){
+
+return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+}
+
+["search","type","deal","budget"].forEach(id=>
+
+$(id).addEventListener(id==="search"?"input":"change",render)
+
+);
+
+$("clearFilters").onclick=()=>{
+
+["search","type","deal","budget"].forEach(id=>$(id).value="");
+
+render();
+
+};
+
+$("adminOpen").onclick=()=>$("adminModal").classList.add("open");
+
+$("adminClose").onclick=()=>$("adminModal").classList.remove("open");
+
+$("adminModal").onclick=e=>{
+
+if(e.target===$("adminModal"))$("adminModal").classList.remove("open");
+
+};
+
+$("listingForm").onsubmit=e=>{
+
+e.preventDefault();
+
+const f=new FormData(e.target);
+
+const x=Object.fromEntries(f.entries());
+
+x.id=Date.now();
+
+x.price=Number(x.price);
+
+x.area=Number(x.area);
+
+x.image=x.image||"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80";
+
+listings.unshift(x);
+
+localStorage.setItem("andruscaListings",JSON.stringify(listings));
+
+e.target.reset();
+
+$("adminModal").classList.remove("open");
+
+render();
+
+alert("Anunțul a fost adăugat în această previzualizare locală.");
+
+};
+
+$("menuToggle").onclick=()=>$("nav").classList.toggle("show");
+
+$("nav").querySelectorAll("a").forEach(a=>
+
+a.onclick=()=>$("nav").classList.remove("show")
+
+);
+
+$("year").textContent=new Date().getFullYear();
+
+render();
+
 </script>
-</body></html>
+
+</body>
+
+</html>
