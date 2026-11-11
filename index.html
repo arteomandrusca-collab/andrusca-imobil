@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Andrusca Imobil — apartamente, case și terenuri de vânzare în Ungheni, Republica Moldova.">
+<meta name="theme-color" content="#111111">
+<title>Andrusca Imobil | Proprietăți în Ungheni</title>
+<style>
+:root{--gold:#c7a45b;--ink:#111;--muted:#777;--paper:#f7f6f2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#171717;background:var(--paper)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#111;color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #39352c}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Georgia,serif;font-size:22px;letter-spacing:1px}.brand span{color:var(--gold)}
+nav{display:flex;gap:22px;font-size:14px}nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:1px solid #555;color:white;padding:9px 12px;border-radius:6px}
+.hero{min-height:480px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.24)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{padding:80px 0;max-width:650px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font:clamp(38px,7vw,68px)/1.05 Georgia,serif;margin:18px 0}.hero p{font-size:18px;line-height:1.65;color:#eee;max-width:550px}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:14px 22px;border-radius:3px;font-weight:bold;border:0;cursor:pointer}.btn.outline{background:transparent;color:white;border:1px solid var(--gold);margin-left:8px}
+section{padding:68px 0}.section-head{text-align:center;margin-bottom:30px}.section-head h2{font:36px Georgia,serif;margin:8px 0}.section-head p{color:var(--muted)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:25px 0 32px}.filters input,.filters select{padding:12px;border:1px solid #ddd;background:white;border-radius:3px;min-width:170px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.property{background:white;box-shadow:0 8px 28px #0000000c;border:1px solid #eceae4}.property img{width:100%;height:220px;object-fit:cover;display:block}.property-body{padding:20px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9a793b;font-weight:bold}.property h3{font:23px Georgia,serif;margin:10px 0}.location{color:#777;font-size:13px}.price{font-size:22px;font-weight:bold;margin:15px 0}.details{display:flex;gap:14px;color:#666;font-size:13px;padding:12px 0;border-top:1px solid #eee}.property .btn{width:100%;text-align:center}
+.about{background:#111;color:white}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about h2{font:38px Georgia,serif}.about p{color:#ccc;line-height:1.8}.about img{width:100%;height:340px;object-fit:cover}
+.contact{background:#eeeae1}.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact h2{font:36px Georgia,serif}.contact p{line-height:1.8;color:#555}.contact-card{background:white;padding:26px;border-top:3px solid var(--gold)}.contact-card a{display:block;margin:13px 0;font-weight:bold}
+footer{background:#0c0c0c;color:#aaa;text-align:center;padding:25px;font-size:13px}footer strong{color:var(--gold)}
+#noResults{display:none;text-align:center;padding:30px;color:#777}
+@media(max-width:760px){.nav{min-height:64px}nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;padding:20px;flex-direction:column}nav.open{display:flex}.menu{display:block}.hero{min-height:430px}.hero-content{padding:60px 0}.grid{grid-template-columns:1fr}.about-inner,.contact-inner{grid-template-columns:1fr}.about img{height:250px}.btn.outline{margin:10px 0 0}.filters input,.filters select{width:100%}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#acasa">ANDRUSCA <span>IMOBIL</span></a>
+<button class="menu" id="menuBtn" aria-label="Deschide meniul">Meniu ☰</button>
+<nav id="nav"><a href="#acasa">Acasă</a><a href="#proprietati">Proprietăți</a><a href="#despre">Despre noi</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero" id="acasa"><div class="wrap hero-content">
+<div class="eyebrow">Imobiliare • Ungheni, Moldova</div>
+<h1>Casa visurilor tale începe aici.</h1>
+<p>Te ajutăm să găsești proprietatea potrivită. Descoperă apartamente, case și terenuri atent prezentate în Ungheni și împrejurimi.</p>
+<a class="btn" href="#proprietati">Vezi proprietățile</a><a class="btn outline" href="#contact">Contactează-ne</a>
+</div></section>
+<section id="proprietati"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Oferte imobiliare</div><h2>Proprietăți recomandate</h2><p>Explorează ofertele disponibile.</p></div>
+<div class="filters">
+<input id="search" type="search" placeholder="Caută după denumire sau zonă">
+<select id="type"><option value="">Toate tipurile</option><option value="Apartament">Apartamente</option><option value="Casă">Case</option><option value="Teren">Terenuri</option></select>
+<select id="budget"><option value="">Orice preț</option><option value="60000">Până la 60.000 €</option><option value="80000">Până la 80.000 €</option><option value="100000">Până la 100.000 €</option></select>
+</div>
+<div class="grid" id="listings">
+<article class="property" data-type="Apartament" data-price="55000" data-search="apartament modern ungheni centru"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Apartament modern"><div class="property-body"><div class="tag">Apartament</div><h3>Apartament modern</h3><div class="location">Ungheni • Zonă centrală</div><div class="price">55.000 €</div><div class="details"><span>2 camere</span><span>Renovat</span></div><a class="btn" href="mailto:artyom.andrusca1997@gmail.com?subject=Interes%20pentru%20apartamentul%20de%2055.000%20EUR">Solicită detalii</a></div></article>
+<article class="property" data-type="Apartament" data-price="72000" data-search="apartament spatios ungheni"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Apartament spațios"><div class="property-body"><div class="tag">Apartament</div><h3>Apartament spațios</h3><div class="location">Ungheni • Cartier liniștit</div><div class="price">72.000 €</div><div class="details"><span>3 camere</span><span>Balcon</span></div><a class="btn" href="mailto:artyom.andrusca1997@gmail.com?subject=Interes%20pentru%20apartamentul%20de%2072.000%20EUR">Solicită detalii</a></div></article>
+<article class="property" data-type="Casă" data-price="95000" data-search="casa familiala ungheni curte"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Casă cu curte"><div class="property-body"><div class="tag">Casă</div><h3>Casă pentru familie</h3><div class="location">Ungheni • Curte proprie</div><div class="price">95.000 €</div><div class="details"><span>4 camere</span><span>Curte</span></div><a class="btn" href="mailto:artyom.andrusca1997@gmail.com?subject=Interes%20pentru%20casa%20de%2095.000%20EUR">Solicită detalii</a></div></article>
+</div><div id="noResults">Nu am găsit proprietăți pentru filtrele selectate.</div>
+<p style="text-align:center;color:#888;font-size:12px;margin-top:22px">Exemple demonstrative — înlocuiește ofertele și fotografiile cu anunțurile reale înainte de publicare.</p>
+</div></section>
+<section class="about" id="despre"><div class="wrap about-inner"><div><div class="eyebrow">Andrusca Imobil</div><h2>Mai aproape de locul pe care îl numești acasă.</h2><p>Suntem aici să-ți simplificăm căutarea unei proprietăți. Îți oferim informații clare, comunicare directă și sprijin pe parcursul alegerii.</p><a class="btn" href="#contact">Discută cu noi</a></div><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="Interior elegant de locuință"></div></section>
+<section class="contact" id="contact"><div class="wrap contact-inner"><div><div class="eyebrow">Suntem la dispoziția ta</div><h2>Hai să găsim proprietatea potrivită.</h2><p>Ai întrebări despre o ofertă sau dorești să publici o proprietate? Contactează-ne telefonic sau prin e-mail.</p></div><div class="contact-card"><div class="tag">Contact direct</div><a href="mailto:artyom.andrusca1997@gmail.com">E-mail: Scrie-ne</a><a href="mailto:artyom.andrusca1997@gmail.com">artyom.andrusca1997@gmail.com</a><p>Ungheni, Republica Moldova</p></div></div></section>
+</main>
+<footer>© <span id="year"></span> <strong>ANDRUSCA IMOBIL</strong> • Ungheni, Republica Moldova</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const search=document.getElementById('search'),type=document.getElementById('type'),budget=document.getElementById('budget');
+function filter(){let shown=0;document.querySelectorAll('.property').forEach(card=>{const okText=card.dataset.search.includes(search.value.toLowerCase()),okType=!type.value||card.dataset.type===type.value,okPrice=!budget.value||Number(card.dataset.price)<=Number(budget.value);card.style.display=okText&&okType&&okPrice?'block':'none';if(okText&&okType&&okPrice)shown++});document.getElementById('noResults').style.display=shown?'none':'block'}
+[search,type,budget].forEach(el=>el.addEventListener('input',filter));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
